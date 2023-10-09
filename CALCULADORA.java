@@ -16,7 +16,7 @@ public class CALCULADORA {
      * @param args the command line arguments
      */
     public static void mensaje() {
-        System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)");
+        System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)"); // ESTABLECE LA FUNCIÓN SUMAR.
     }
 
     public static double elnumero1() {
@@ -36,25 +36,25 @@ public class CALCULADORA {
         return numero2;
     }
 
-    public static double resultadosumar(double numero1, double numero2) {
+    public static double resultadosumar(double numero1, double numero2) { // ESTABLECE LA FUNCIÓN SUMAR
         double resultado;
         resultado = numero1 + numero2;
         return resultado;
     }
 
-    public static double resultadorestar(double numero1, double numero2) {
+    public static double resultadorestar(double numero1, double numero2) {  // ESTABLECE LA FUNCIÓN RESTAR
         double resultado;
         resultado = numero1 - numero2;
         return resultado;
     }
 
-    public static double resultadomultiplicar(double numero1, double numero2) {
+    public static double resultadomultiplicar(double numero1, double numero2) {    //// ESTABLECE LA FUNCIÓN MULTIPLICAR
         double resultado;
         resultado = numero1 * numero2;
         return resultado;
     }
 
-    public static double resultadodividir(double numero1, double numero2) {
+    public static double resultadodividir(double numero1, double numero2) {    // ESTABLECE LA FUNCIÓN DIVIDIR
         double resultado;
         resultado = numero1 / numero2;
         return resultado;
@@ -83,7 +83,7 @@ public class CALCULADORA {
         mensaje();
         Scanner leer3 = new Scanner(System.in);
         operacion = leer3.nextInt();
-        
+
         switch (operacion) {
             case 1:
                 System.out.println("El resultado de la suma es " + suma);
@@ -111,14 +111,14 @@ public class CALCULADORA {
         opcion = leer4.nextInt();     //establece que operacion
 
         while (opcion == 1) {
-        numero1 = elnumero1();
-        numero2 = elnumero2();
+            numero1 = elnumero1();
+            numero2 = elnumero2();
 
-        suma = resultadosumar(numero1, numero2);
-        resta = resultadorestar(numero1, numero2);
-        multiplicacion = resultadomultiplicar(numero1, numero2);
-        division = resultadodividir(numero1, numero2);
-        resto = numero1 % numero2;
+            suma = resultadosumar(numero1, numero2);
+            resta = resultadorestar(numero1, numero2);
+            multiplicacion = resultadomultiplicar(numero1, numero2);
+            division = resultadodividir(numero1, numero2);
+            resto = numero1 % numero2;
 
             System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)");
             Scanner leer6 = new Scanner(System.in);
