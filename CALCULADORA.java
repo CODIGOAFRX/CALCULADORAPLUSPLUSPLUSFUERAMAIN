@@ -16,7 +16,7 @@ public class CALCULADORA {
      * @param args the command line arguments
      */
     public static void mensaje() {
-        System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)"); // ESTABLECE LA FUNCIÓN SUMAR.
+        System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)"); // ESTABLECE LA FUNCIÓN ESCOGE OPERACIÓN .
     }
 
     public static double elnumero1() {
@@ -32,7 +32,6 @@ public class CALCULADORA {
         System.out.println("introduce el segundo valor");// aquí leería lo que escriba el usuario
         Scanner leer2 = new Scanner(System.in);
         double numero2 = leer2.nextDouble(); // establece el nº2
-        // continuamos estableciendo las operaciones que va a realizar la calculadora
         return numero2;
     }
 
@@ -66,11 +65,12 @@ public class CALCULADORA {
         // Añadimos un texto introductorio a modo de presentación de nuestra
         // calculadora
 
+        //DEFINIMOS VARIABLES
         double numero1, numero2, suma, resta, multiplicacion, division, resto;
         int operacion;
         int opcion;
         Scanner leer = new Scanner(System.in);
-
+        // llamamos a las funciones a continuación
         numero1 = elnumero1();
         numero2 = elnumero2();
 
@@ -79,38 +79,38 @@ public class CALCULADORA {
         multiplicacion = resultadomultiplicar(numero1, numero2);
         division = resultadodividir(numero1, numero2);
         resto = numero1 % numero2;
-
+        //llamamos a la funcion mensaje
         mensaje();
         Scanner leer3 = new Scanner(System.in);
         operacion = leer3.nextInt();
-
+                                                            //abrimos switch
         switch (operacion) {
             case 1:
-                System.out.println("El resultado de la suma es " + suma);
+                System.out.println("El resultado de la suma es " + suma);  //definimos caso 1
                 break;
 
             case 2:
-                System.out.println("El resultado de la resta es " + resta);
+                System.out.println("El resultado de la resta es " + resta);  //definimos caso 2
                 break;
 
             case 3:
-                System.out.println("El resultado de la multiplicacion es " + multiplicacion);
+                System.out.println("El resultado de la multiplicacion es " + multiplicacion);  //definimos caso 3
                 break;
 
             case 4:
-                System.out.println("El resultado de la division es " + division + " y el resto es " + resto);
+                System.out.println("El resultado de la division es " + division + " y el resto es " + resto);  //definimos caso 4
                 break;
 
             default:
-                System.out.println("ERROR ");
+                System.out.println("ERROR ");  //definimos default con mensaje de error
 
         }
-        System.out.println("Quiere hacer otra operacion?? 1 (si) 2 (no)");
+        System.out.println("Quiere hacer otra operacion?? 1 (si) 2 (no)"); 
 
         Scanner leer4 = new Scanner(System.in);
-        opcion = leer4.nextInt();     //establece que operacion
+        opcion = leer4.nextInt();     //establece que opcion escogemos
 
-        while (opcion == 1) {
+        while (opcion == 1) {               //si opcion es 1, repetimos lo de arriba
             numero1 = elnumero1();
             numero2 = elnumero2();
 
@@ -120,7 +120,7 @@ public class CALCULADORA {
             division = resultadodividir(numero1, numero2);
             resto = numero1 % numero2;
 
-            System.out.println("ESCOJA OPERACION 1(suma), 2(resta),3(multiplicacion),4(division)");
+            mensaje ();
             Scanner leer6 = new Scanner(System.in);
             operacion = leer6.nextInt();     //establece que operacion
 
@@ -144,7 +144,7 @@ public class CALCULADORA {
                 default:
                     System.out.println("ERROR ");
             }
-            System.out.println("Quiere hacer otra operacion?? 1 (si) 2 (no)");
+            System.out.println("Quiere hacer otra operacion?? 1 (si) 2 (no)"); // el bucle se repite hasta que operación sea 2
             Scanner leer5 = new Scanner(System.in);
             opcion = leer5.nextInt();     //establece que operacion
 
